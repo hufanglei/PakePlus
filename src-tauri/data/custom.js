@@ -35,11 +35,3 @@ document.addEventListener('selectstart', e => e.preventDefault());
 document.addEventListener('keydown', e => {
   if (e.ctrlKey || e.metaKey) e.preventDefault();
 });
-
-document.addEventListener('visibilitychange', function() {
-    if (document.hidden) {
-        document.body.style.filter = 'blur(10px)';
-    } else {
-        document.body.style.filter = 'none';
-    } 
-});
