@@ -36,20 +36,10 @@ document.addEventListener('keydown', e => {
   if (e.ctrlKey || e.metaKey) e.preventDefault();
 });
 
-document.addEventListener('keydown', function(e) {
-    if (e.key === 'PrintScreen') {
-        alert('截屏已被禁用');
-        e.preventDefault();
-    }
- });
- 
 document.addEventListener('visibilitychange', function() {
     if (document.hidden) {
         document.body.style.filter = 'blur(10px)';
     } else {
         document.body.style.filter = 'none';
-    }
-    if (document.visibilityState === 'hidden') {
-       alert('页面不可见，可能正在截屏');
-    }
+    } 
 });
